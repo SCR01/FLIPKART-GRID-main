@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Detection</title>
+    <link
+      href="{{url_for('static', filename='style/styles.css')}}"
+      rel="stylesheet"
+    />
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .fade-in {
+        animation: fadeIn 2s ease-in-out;
+      }
+      .white-border {
+        border: 2px solid white;
+      }
+
+      #videoElement {
+        width: 100%;
+        height: auto;
+        border: 1px solid black;
+        position: relative;
+      }
+      #timerCanvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+      }
+      #captureButton {
+        display: block;
+        margin-top: 10px;
+      }
+      #container {
+        position: relative;
+        display: inline-block;
+        width: 80%;
+      }
+    </style>
+  </head>
+  <body class="bg-black text-white font-sans">
+    <!-- Header -->
+    <header class="flex justify-between items-center p-6">
+      <div class="text-2xl font-bold">
+        <a href="/"> TEAM RB</a>
+      </div>
+      <nav class="space-x-8 flex justify-center items-center text-xl">
+        <a href="/" class="hover:text-blue-500">Home</a>
+        <a href="/detect" class="hover:text-blue-500">Detect</a>
+        <a href="/results" class="hover:text-blue-500">Results</a>
+      </nav>
+      <a
+        href="https://github.com/Dev-Reddy/FLIPKART_GRID_6.0_ROBOTICS"
+        target="_blank"
+      >
+        <img
+          src="https://static-00.iconduck.com/assets.00/github-icon-512x497-oppthre2.png"
+          alt="GitHub"
+          class="w-8 h-8"
+        />
+      </a>
+    </header>
+
+    <!-- Main content: Object Detection Camera Feed -->
+    <section class="text-center mt-10 fade-in">
+      <h1 class="text-4xl lg:text-6xl font-bold">
+        Object Detection Camera Feed
+      </h1>
+      <div class="mt-8">
+        <div>
+          <select
+            id="interval"
+            class="bg-gray-800 text-white font-semibold py-2 px-6 rounded-lg"
+          >
+            <option value="manual" selected>Manual</option>
+            <option value="1000">1 second</option>
+            <option value="2000">2 seconds</option>
+            <option value="3000">3 seconds</option>
+            <option value="4000">4 seconds</option>
+            <option value="5000">5 seconds</option>
+            <option value="6000">6 seconds</option>
+            <option value="7000">7 seconds</option>
+            <option value="8000">8 seconds</option>
+            <option value="9000">9 seconds</option>
+            <option value="10000">10 seconds</option>
+          </select>
+        </div>
+        <div class="mx-auto">
+          <button
+            id="captureButton"
+            class="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 px-6 mx-auto rounded-lg"
+          >
+            Capture Image
+          </button>
+        </div>
+      </div>
+
+      <div id="container" class="mt-8 border border-white">
+        <video autoplay="true" id="videoElement" class="white-border"></video>
+        <canvas id="timerCanvas"></canvas>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="text-center mt-16 p-8 text-gray-500">
+      <div class="flex justify-center space-x-4 mb-4">
+        <a href="#"
+          ><img
+            src="https://img.icons8.com/material-rounded/24/ffffff/facebook-new.png"
+            alt="Facebook"
+        /></a>
+        <a href="#"
+          ><img
+            src="https://img.icons8.com/material-rounded/24/ffffff/twitter.png"
+            alt="Twitter"
+        /></a>
+        <a href="#"
+          ><img
+            src="https://img.icons8.com/material-rounded/24/ffffff/linkedin.png"
+            alt="LinkedIn"
+        /></a>
+        <a href="#"
+          ><img
+            src="https://img.icons8.com/material-rounded/24/ffffff/instagram-new.png"
+            alt="Instagram"
+        /></a>
+      </div>
+      ©️ 2024 GRID 6.0. All rights reserved.
+    </footer>
+
+    <script src="{{url_for('static', filename='js/detect.js')}}"></script>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Detection</title>
+    <style>
+      #videoElement {
+        width: 100%;
+        height: auto;
+        border: 1px solid black;
+        position: relative;
+      }
+      #timerCanvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+      }
+      #captureButton {
+        display: block;
+        margin-top: 10px;
+      }
+      #container {
+        position: relative;
+        display: inline-block;
+        width: 80%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Object Detection Camera Feed</h1>
+    <select id="interval">
+      <option value="manual" selected>Manual</option>
+      <option value="1000">1 second</option>
+      <option value="2000">2 seconds</option>
+      <option value="3000">3 seconds</option>
+      <option value="4000">4 seconds</option>
+      <option value="5000">5 seconds</option>
+      <option value="6000">6 seconds</option>
+      <option value="7000">7 seconds</option>
+      <option value="8000">8 seconds</option>
+      <option value="9000">9 seconds</option>
+      <option value="10000">10 seconds</option>
+    </select>
+    <button id="captureButton">Capture Image</button>
+    <div id="container">
+      <video autoplay="true" id="videoElement"></video>
+      <canvas id="timerCanvas"></canvas>
+    </div>
+    <script src="{{url_for('static', filename='js/detect.js')}}"></script>
+  </body>
+</html> -->

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GRID 6.0 - Smart Vision Technology Quality Control</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link
+      href="{{url_for('static', filename='style/styles.css')}}"
+      rel="stylesheet"
+    />
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .fade-in {
+        animation: fadeIn 2s ease-in-out;
+      }
+      .white-border {
+        border: 2px solid white;
+      }
+
+      /* Support section styling */
+      .form-input,
+      .form-textarea {
+        background-color: #1a202c;
+        border: 2px solid #4a5568;
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="bg-black text-white font-sans">
+    <header class="flex justify-between items-center p-6">
+      <div class="text-2xl font-bold">
+        <a href="/"> TEAM RB</a>
+      </div>
+      <nav class="space-x-8 flex justify-center items-center text-xl">
+        <a href="#features" class="hover:text-blue-500">Features</a>
+        <a href="#about" class="hover:text-blue-500">About</a>
+
+        <a href="/detect" class="hover:text-blue-500">Detect</a>
+        <a href="/results" class="hover:text-blue-500">Results</a>
+      </nav>
+      <a
+        href="https://github.com/Dev-Reddy/FLIPKART_GRID_6.0_ROBOTICS"
+        target="_blank"
+      >
+        <img
+          src="https://static-00.iconduck.com/assets.00/github-icon-512x497-oppthre2.png"
+          alt="GitHub"
+          class="w-8 h-8"
+        />
+      </a>
+    </header>
+    <div class="flex justify-center items-center mt-6">
+      <img
+        src="https://about.fb.com/wp-content/uploads/2022/12/EOY-VR-Roundup_Header.gif"
+        alt="Smart Vision GIF"
+        class="w-auto h-auto"
+      />
+    </div>
+    <section class="text-center mt-6 fade-in">
+      <h1 class="text-4xl lg:text-6xl font-bold">
+        GRID 6.0 - Smart Vision Technology Quality Control
+      </h1>
+      <p class="mt-4 text-lg lg:text-xl text-gray-400">
+        A leading solution leveraging smart vision technology for advanced
+        quality control, powered by OCR and IR.
+      </p>
+
+      <div
+        id="detailsSection"
+        class="mt-8 p-6 text-left fade-in bg-gray-800 rounded-lg"
+      >
+        <h2 class="text-3xl font-bold mb-4">Smart Vision Technology</h2>
+        <p>
+          Smart vision technology uses advanced imaging systems and algorithms
+          to capture and analyze visual information. In the context of quantity
+          and quality testing, it helps automate the quality inspection process
+          by identifying a product, its quantity, and any defects or quality
+          attributes.
+        </p>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="text-center mt-24 fade-in">
+      <h2 class="text-3xl lg:text-4xl font-bold mb-12">Features</h2>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4 lg:px-24"
+      >
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-4">OCR for Brand Details</h3>
+          <p class="text-gray-400">
+            Automatically detect and extract brand names from product packaging
+            using advanced OCR technology.
+          </p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-4">OCR for Expiry Date</h3>
+          <p class="text-gray-400">
+            Quickly identify and retrieve the expiry date from product labels to
+            ensure product freshness and safety.
+          </p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-4">IR-based Counting</h3>
+          <p class="text-gray-400">
+            Utilize infrared (IR) sensors for accurate counting of items,
+            improving inventory management and automation.
+          </p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-4">Freshness Detection</h3>
+          <p class="text-gray-400">
+            Detect the freshness of products using advanced sensor technology to
+            ensure optimal quality and reduce waste.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="text-center mt-24 fade-in">
+      <h2 class="text-3xl lg:text-4xl font-bold mb-8">About</h2>
+      <p class="text-lg lg:text-xl text-gray-400">
+        The creators of this project are Dev Reddy and Sharad C Reddy, dedicated
+        to innovating in the field of smart vision technology for enhanced
+        quality control systems.
+      </p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="text-center mt-16 p-8 text-gray-500">
+      <div class="flex justify-center space-x-4 mb-4">
+        <a href="#"
+          ><img
+            src="https://img.icons8.com/material-rounded/24/ffffff/facebook-new.png"
+            alt="Facebook"
+        /></a>
+        <a href="#"
+          ><img
+            src="https://img.icons8.com/material-rounded/24/ffffff/twitter.png"
+            alt="Twitter"
+        /></a>
+        <a href="#"
+          ><img
+            src="https://img.icons8.com/material-rounded/24/ffffff/linkedin.png"
+            alt="LinkedIn"
+        /></a>
+        <a href="#"
+          ><img
+            src="https://img.icons8.com/material-rounded/24/ffffff/instagram-new.png"
+            alt="Instagram"
+        /></a>
+      </div>
+      ©️ 2024 GRID 6.0. All rights reserved.
+    </footer>
+
+    <script>
+      const detailsButton = document.getElementById("detailsButton");
+      const detailsSection = document.getElementById("detailsSection");
+      const uploadButton = document.getElementById("imageUpload");
+      const uploadedImage = document.getElementById("uploadedImage");
+      const placeholderText = document.getElementById("placeholderText");
+
+      detailsButton.addEventListener("click", function () {
+        detailsSection.classList.toggle("hidden");
+      });
+
+      uploadButton.addEventListener("change", function () {
+        if (this.files && this.files[0]) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            uploadedImage.src = e.target.result;
+            uploadedImage.classList.remove("hidden"); // Show the image
+            placeholderText.classList.add("hidden"); // Hide the placeholder text
+          };
+          reader.readAsDataURL(this.files[0]);
+        }
+      });
+    </script>
+  </body>
+</html>

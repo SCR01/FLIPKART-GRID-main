@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GRID 6.0 - Detection Results</title>
+    <link
+      href="{{url_for('static', filename='style/styles.css')}}"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .fade-in {
+        animation: fadeIn 2s ease-in-out;
+      }
+      .white-border {
+        border: 2px solid white;
+      }
+
+      /* Table styling */
+      table {
+        width: 80%;
+        margin: 0 auto; /* Centering the table */
+        border-collapse: collapse;
+        margin-top: 2rem;
+        background-color: #1a202c;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+        color: white;
+      }
+      th {
+        background-color: #4a5568;
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="bg-black text-white font-sans">
+    <!-- Header -->
+    <header class="flex justify-between items-center p-6">
+      <div class="text-2xl font-bold">GRID 6.0</div>
+      <nav class="space-x-8 flex justify-center items-center text-xl">
+        <a href="#features" class="hover:text-blue-500">Features</a>
+        <a href="#about" class="hover:text-blue-500">About</a>
+        <a href="#support" class="hover:text-blue-500">Support</a>
+        <a href="/detect" class="hover:text-blue-500">Detect</a>
+        <a href="/results" class="hover:text-blue-500">Results</a>
+      </nav>
+      <a
+        href="https://github.com/Dev-Reddy/FLIPKART_GRID_6.0_ROBOTICS"
+        target="_blank"
+      >
+        <img
+          src="https://static-00.iconduck.com/assets.00/github-icon-512x497-oppthre2.png"
+          alt="GitHub"
+          class="w-8 h-8"
+        />
+      </a>
+    </header>
+
+    <!-- Main content: Detection Results -->
+    <section class="text-center mt-16 fade-in">
+      <h1 class="text-4xl lg:text-6xl font-bold">Detection Results</h1>
+      <div class="mt-8">
+        <table id="results-table" class="white-border">
+          <thead>
+            <tr>
+              <th>Serial Number</th>
+              <th>Name</th>
+              <th>MRP</th>
+              <th>Status</th>
+              <th>Manufacturing Date</th>
+              <th>Expiry Date</th>
+              <th>Brand</th>
+              <th>Pack Size</th>
+            </tr>
+          </thead>
+          <tbody id="results-body">
+            <!-- Rows will be appended here -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <script src="{{url_for('static', filename='js/results.js')}}"></script>
+  </body>
+</html>
