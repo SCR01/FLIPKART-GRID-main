@@ -4,6 +4,9 @@
 
 GRID 6.0 is a project that detects fruits and vegetables in images and analyzes their freshness. Additionally, it processes non-fruit/vegetable images using OCR to extract details such as product name, brand, pack size, manufacturing date, expiry date, and MRP. The project utilizes a Flask backend, a MobileNet-based object detection model, a fine-tuned freshness detection model, and AWS OCR for text extraction.
 
+##Deployment
+link: http://13.126.113.135:3100/
+
 ## Features
 
 - *Fruit & Vegetable Detection*: Identifies whether the object in the image is a fruit or vegetable.
