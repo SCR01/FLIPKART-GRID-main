@@ -97,6 +97,7 @@ The following fruits and vegetables are supported for freshness detection:
 ## Contributors
 
 -[Sharad Chandra Reddy](https://www.linkedin.com/in/sharad-chandra-reddy/)
+
 -[Dev Reddy](https://www.linkedin.com/in/devreddy07)
   
 
